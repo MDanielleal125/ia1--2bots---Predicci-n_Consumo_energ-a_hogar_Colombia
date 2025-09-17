@@ -3,7 +3,7 @@ o esc# ia1--2bots---Predicción_valor_facturación_energía_hogar_Colombia-
 **Equipo: 2bots**<br>
 **Autores** 
  <ul> <li>Daniel Fernando Leal Ayala 2191430</li>
-     <li>Rafael Andres Pinilla Vargas </li>
+     <li>Rafael Andres Pinilla Vargas 2221929 </li>
  </ul>
 
 # Descripción de los datos
