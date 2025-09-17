@@ -1,4 +1,4 @@
-# ia1--2bots---Predicción_valor_facturación_energía_hogar_Colombia-
+o esc# ia1--2bots---Predicción_valor_facturación_energía_hogar_Colombia-
 **Curso: Inteligencia Artificial I -2025-2 C1**<br>
 **Equipo: 2bots**<br>
 **Autores** 
@@ -12,7 +12,7 @@ Dataset: Superservicios - Facturación a Usuarios - Energía (Formato TC2)
 
 Fuente: https://www.datos.gov.co/Minas-y-Energ-a/Superservicios-Facturaci-n-a-Usuarios-Energia/gw2d-7n7y/about_data
 
-Cantidad de datos: 50000 registros 
+Cantidad de datos: 94 Millones de registros 
 
 # ❓ Preguntas a responder
 ## Antes del EDA 
@@ -33,8 +33,11 @@ Se eligió este problema porque el consumo de energía tiene impacto práctico y
 
 ## Después del EDA 
 
-Usamos datos tabulares de facturación eléctrica a usuarios en Colombia (94M registros). Incluyen consumo en kWh, tarifas aplicadas, subsidios, moras, fechas de facturación y empresa prestadora del servicio.
+### Datos utilizados
+Usamos datos tabulares de facturación eléctrica a usuarios en Colombia (94M registros,pero se cogió una muestra de 50000). Incluyen consumo en kWh, tarifas aplicadas, subsidios, moras, fechas de facturación y empresa prestadora del servicio.
 
-Las variables principales incluyen: consumo de usuario (car_t1743_cons_usuario), promedio histórico (car_t1743_cons_prom_sem), tarifa aplicada (tarifa_apl), tipo de usuario (car_t1743_tipo_usu_rc), subsidios (car_t1743_cons_subsist, val_subs_usu), días facturados, valor total de factura y empresa prestadora. Estas variables permiten segmentar usuarios en residenciales, comerciales e industriales, identificar beneficiarios de subsidios y relacionar patrones de consumo con precios, tiempos de facturación y regiones.
+### Información contenida en los datos 
+Las variables disponibles permiten analizar el problema desde diferentes perspectivas. El consumo de usuario y el promedio histórico facilitan detectar cambios y patrones de uso. La tarifa aplicada y el valor total de la factura relacionan el consumo con los costos. El tipo de usuario permite segmentar entre residenciales, comerciales e industriales. Los subsidios ayudan a evaluar impactos sociales y económicos. Finalmente, los días facturados y la empresa prestadora contextualizan la información en el tiempo y por región. Estas características combinadas posibilitan un análisis integral para comprender y proponer soluciones al problema.
 
+### Desafíos asociados a los datos
 El dataset presenta retos de tamaño (94M filas), outliers extremos en consumo (hasta 588.000 kWh), valores nulos en algunas columnas, y categorías sin documentación clara (ej. tipo de usuario 1, 2, 3). También existen sesgos regionales, pues empresas pequeñas registran menos datos. Estos factores requieren muestreo, transformaciones logarítmicas y segmentación por tipo de usuario para entrenar un modelo robusto.
