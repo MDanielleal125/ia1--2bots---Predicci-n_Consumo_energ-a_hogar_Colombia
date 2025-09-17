@@ -1,24 +1,37 @@
 # ia1--2bots---Predicción_valor_facturación_energía_hogar_Colombia-
-# 📊 Descripción de los datos
+**Curso: Inteligencia Artificial I -2025-2 C1**<br>
+**Equipo: 2bots**<br>
+**Autores** 
+ <ul> <li>Daniel Fernando Leal Ayala 2191430</li>
+     <li>Rafael Andres Pinilla Vargas </li>
+ </ul>
+
+# Descripción de los datos
 
 Dataset: Superservicios - Facturación a Usuarios - Energía (Formato TC2)
 
-Fuente: Datos Abiertos Colombia
+Fuente: https://www.datos.gov.co/Minas-y-Energ-a/Superservicios-Facturaci-n-a-Usuarios-Energia/gw2d-7n7y/about_data
 
-Cantidad de datos: 94 millones de registros (trabajamos con muestras representativas).
+Cantidad de datos: 50000 registros 
 
 # ❓ Preguntas a responder
-🔹 Antes del EDA (conceptual)
+## Antes del EDA 
+### Problema y relevancia
 
-Queremos predecir el consumo de energía de los usuarios en Colombia para anticipar el valor de sus facturas. Este problema es relevante porque el consumo eléctrico impacta la planeación de subsidios, la sostenibilidad financiera de las empresas y la gestión de la demanda en un sector crítico como el energético. Un modelo predictivo permite identificar patrones de consumo y apoyar decisiones tanto regulatorias como empresariales.
+*El análisis del consumo de energía en Colombia permite predecir el consumo de los usuarios para anticipar sus facturas y comprender los patrones de uso. Esto es importante porque ayuda a planificar la demanda, garantizar la sostenibilidad financiera del sector eléctrico y optimizar la operación de la red. Además, proporciona información útil para los usuarios, al permitir una facturación más precisa y detectar consumos inusuales, mientras apoya la toma de decisiones estratégicas y regulatorias en el sector..*
 
-El EDA busca entender la distribución del consumo, detectar outliers, explorar relaciones entre consumo y variables como tarifa, tipo de usuario y subsidios, e identificar qué predictores tienen mayor influencia. Esta fase permite preparar un modelo más robusto y segmentado.
+### Objetivo del análisis
+El EDA busca entender la distribución del consumo, detectar outliers, explorar relaciones entre consumo y variables como tarifa, tipo de usuario y subsidios, e identificar qué predictores tienen mayor influencia. Esta fase ayuda a organizar y limpiar los datos, seleccionar variables relevantes y establecer una base sólida para construir predicciones confiables del consumo de energía.
 
-Se consideran el consumo promedio, la mediana y los percentiles 95–99.9 para medir extremos. La correlación entre variables numéricas identifica predictores útiles. Además, se analizarán métricas de error (MAE, RMSE) en la fase de modelado. Estas métricas son útiles porque capturan tanto tendencias centrales como desviaciones extremas en el consumo.
+### Métricas o indicadores
+Se pueden usar métricas descriptivas como el consumo promedio, la mediana y percentiles altos (95–99.9) para evaluar la distribución y detectar valores extremos. También son útiles las correlaciones entre consumo y variables como tipo de usuario, tarifa, días facturados o número de familias, ya que permiten identificar predictores relevantes. Estas medidas ayudan a entender la variabilidad del consumo y orientar la selección de variables antes de construir modelos predictivos.
 
-El consumo de energía es un problema real y con impacto social en Colombia. Elegimos este tema porque conecta datos abiertos de gran escala con un problema práctico de predicción y optimización de recursos.
+Estas métricas permiten comprender la distribución y variabilidad del consumo, detectar valores atípicos que podrían distorsionar el análisis y evaluar qué variables están más relacionadas con el consumo. Esto ayuda a seleccionar predictores relevantes y a preparar los datos de manera adecuada antes de construir modelos de predicción.
 
-🔹 Después del EDA (basado en datos)
+### Motivación de la elección
+Se eligió este problema porque el consumo de energía tiene impacto práctico y social en Colombia, ofrece un desafío con datos reales de gran escala y permite explorar patrones relevantes que son útiles tanto para usuarios como para la gestión del sector eléctrico.
+
+## Después del EDA 
 
 Usamos datos tabulares de facturación eléctrica a usuarios en Colombia (94M registros). Incluyen consumo en kWh, tarifas aplicadas, subsidios, moras, fechas de facturación y empresa prestadora del servicio.
 
